@@ -9,8 +9,8 @@ def get_html():
 
 @app.route('./temp', methods=['POST'])
 def update_temp():
-    time = request.from["time"]
-    temp = request.from["temp"]
+    time = request.form["time"]
+    temp = request.form["temp"]
     try:
         f = open(file_path, 'w')
         f.write(time + "," + temp)
