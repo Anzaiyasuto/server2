@@ -34,4 +34,4 @@ def get_temp():
         return temp
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', post=port_num)
+    app.run(debug=True, host='0.0.0.0', port=port_num)
