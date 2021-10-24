@@ -7,7 +7,7 @@ port_num = 18011
 def get_html():
     return render_template('./index.html')
 
-@app.route('./temp', methods=['POST'])
+@app.route('/temp', methods=['POST'])
 def update_temp():
     time = request.form["time"]
     temp = request.form["temp"]
