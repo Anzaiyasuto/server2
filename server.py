@@ -10,10 +10,13 @@ def get_html():
 @app.route('/temp', methods=['POST'])
 def update_temp():
     time = request.form["time"]
+    moisture = request.form["moisture"]
     temp = request.form["temp"]
+    press = request.form["press"]
+    hum = request.form["hum"]
     try:
         f = open(file_path, 'w')
-        f.write(time + "," + temp)
+        f.write(time + "," + moisture + "," + temp + "," + press + "," + hum)
         return "succeeded to write"
     except Exception as e:
         print(e)
