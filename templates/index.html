@@ -7,7 +7,7 @@
                 const sensorDate = await fetch(url).then(response => response.text())
                 const target = document.getElementById(element)
                 const temp = sensorDate.split(",")
-                target.innerHTML = `<h2>時刻:${temp[0]}</h2><h3>土壌湿度:${temp[1]}</h3><h4>気温:${temp[2]}</h4><h5>気圧:${temp[3]}</h5><h6>湿度:${temp[4]}</h6>`
+                target.innerHTML = `<p>時刻:${temp[0]}</p><p>土壌湿度:${temp[1]}</p><p>気温:${temp[2]}</p><p>気圧:${temp[3]}</p><p>湿度:${temp[4]}</p>`
             }
         </script>
     </head>
