@@ -7,11 +7,11 @@
                 const sensorDate = await fetch(url).then(response => response.text())
                 const target = document.getElementById(element)
                 const temp = sensorDate.split(",")
-                target.innerHTML = `<h2>時刻:${temp[0]}</h2>`
-                target.innerHTML = `<h3>土壌湿度:${temp[1]}</h3>`
-                target.innerHTML = `<h4>気温:${temp[2]}</h4>`
-                target.innerHTML = `<h5>気圧:${temp[3]}</h5>`
-                target.innerHTML = `<h6>湿度:${temp[4]}</h6>`
+                target.insertAdjacentHTML('afterbegin',`<h2>時刻:${temp[0]}</h2>`)
+                target.insertAdjacentHTM('afterbegin',`<h3>土壌湿度:${temp[1]}</h3>`)
+                target.insertAdjacentHTM('afterbegin',`<h4>気温:${temp[2]}</h4>`)
+                target.insertAdjacentHTML('afterbegin',`<h5>気圧:${temp[3]}</h5>`)
+                target.insertAdjacentHTM('afterbegin',`<h6>湿度:${temp[4]}</h6>`)
 
             }
         </script>
